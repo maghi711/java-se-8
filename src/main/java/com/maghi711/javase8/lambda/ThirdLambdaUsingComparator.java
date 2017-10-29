@@ -19,7 +19,12 @@ public class ThirdLambdaUsingComparator {
         }
 
         Comparator<String> lambdaComparator =
-                (String o1, String o2) -> Integer.compare(o1.length(), o2.length());
+                null;
+        try {
+            lambdaComparator = (String o1, String o2) -> Integer.compare(o1.length(), o2.length());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Collections.sort(list, lambdaComparator);
         for (String s: list) {
             System.out.println("s = " + s);

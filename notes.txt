@@ -15,3 +15,39 @@ To make instances of anonymous classes easier to write and read
 
 What is a Java 8 Lambda Expression?
 Another way of writing instances of anonymous classes
+
+
+--------------------------------------------------------------------
+Several ways of writing a Lambda Expression
+
+The simplest way and more than one argument:
+FileFilter filter = (File file) -> file.getName().endsWith(".java");
+
+If I have more than one line of code
+Runnable r = () -> {
+	for (int i=0; i < 5; i++) {
+		System.out.println("Hello World!");
+	}
+};
+
+--------------------------------------------------------------------
+What is the type of lambda expression?
+Answer: A functional interface - is an interface with only one abstract method.
+Example: Runnable, Comparator, FileFilter
+A functional interface can be annotated
+@FunctionalInterface
+public interface MyFunctionalInterface {
+	someMethod();
+
+	equals(Object o);
+
+};
+This annotation is totally optional, since compiler can tell it or identify it.
+
+--------------------------------------------------------------------
+Can a lambda be put in a variable?
+Answer:
+
+--------------------------------------------------------------------
+Is a lambda expression an Object?
+Answer:
