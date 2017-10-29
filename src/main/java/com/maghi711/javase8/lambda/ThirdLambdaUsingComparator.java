@@ -17,5 +17,12 @@ public class ThirdLambdaUsingComparator {
         for (String s: list) {
             System.out.println("s = " + s);
         }
+
+        Comparator<String> lambdaComparator =
+                (String o1, String o2) -> Integer.compare(o1.length(), o2.length());
+        Collections.sort(list, lambdaComparator);
+        for (String s: list) {
+            System.out.println("s = " + s);
+        }
     }
 }
