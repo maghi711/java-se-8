@@ -1,0 +1,17 @@
+#################
+Module I - Overview
+#################
+
+Lambda Expressions introduction
+Lambda Syntax
+Functional Interfaces
+Method References
+Constructor References
+How to process data from Collection API?
+
+
+What is a lambda expression for?
+To make instances of anonymous classes easier to write and read
+
+What is a Java 8 Lambda Expression?
+Another way of writing instances of anonymous classes

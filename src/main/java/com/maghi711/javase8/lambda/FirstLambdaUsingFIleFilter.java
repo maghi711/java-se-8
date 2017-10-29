@@ -1,9 +1,9 @@
-package com.maghi711.javase8;
+package com.maghi711.javase8.lambda;
 
 import java.io.File;
 import java.io.FileFilter;
 
-public class FirstLambda {
+public class FirstLambdaUsingFIleFilter {
 
     public static void main(String[] args) {
 
