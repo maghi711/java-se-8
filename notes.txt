@@ -46,8 +46,70 @@ This annotation is totally optional, since compiler can tell it or identify it.
 
 --------------------------------------------------------------------
 Can a lambda be put in a variable?
-Answer:
+Answer: Yes, This is what we have been doing in the examples so far
+A lambda can be taken as a method parameter, and can be returned by a method
 
 --------------------------------------------------------------------
 Is a lambda expression an Object?
-Answer:
+Answer: No, is still an Object without an identity
+A lambda expression is created without using <<new>>
+
+
+
+
+Package java.util.function
+4 categories:
+
+Supplier:
+
+@FunctionalInterface 
+public interface Supplier<T> {
+	T get();
+}
+
+SECOND
+Consumer/BiConsumer:
+
+@FunctionalInterface
+public interface Consumer<T> {
+	void accept(T t);
+}
+
+@FunctionalInterface
+public interface Consumer<T, U> {
+	void accept(T t, U u);
+}
+
+THIRD
+Predicate/BiPredicate:
+
+@FunctionalInterface
+public interface Predicate<T> {
+	boolean test(T t);
+}
+
+@FunctionalInterface
+public interface Predicate<T, U> {
+	boolean test(T t, U u);
+}
+
+Function:
+
+@FunctionalInterface
+public interface Function<T, R> {
+	R apply(T t);
+}
+
+@FunctionalInterface
+public interface Function<T, U, R> {
+	R apply(T t, U u);
+}
+
+@FunctionalInterface
+public interface UnaryOperator<T> extends Function<T, T> {
+}
+
+@FunctionalInterface
+public interface BinaryOperator<T> extends Function<T, T, T> {
+}
+
