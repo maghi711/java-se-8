@@ -113,3 +113,4 @@ public interface UnaryOperator<T> extends Function<T, T> {
 public interface BinaryOperator<T> extends Function<T, T, T> {
 }
 
+We can use (s1, s2) instead of (String s1, String s2) as of java 8
